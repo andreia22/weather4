@@ -1,7 +1,4 @@
 ﻿using Autofac;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Weather.Services;
 using Weather.ViewModels;
 using Weather.Views;
@@ -10,10 +7,9 @@ using Xamarin.Forms;
 namespace Weather
 {
     public class Bootstrapper
-
+    { 
      public static void Init()
     {
-
         var navigation = new FormsNavigationHelper();
         if (Device.Idiom == TargetIdiom.Phone)
         {

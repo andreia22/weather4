@@ -1,8 +1,6 @@
-﻿using Caliburn.Micro;
-using System;
-using Weather.Views;
+﻿using Weather.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+
 
 namespace Weather
 {
@@ -14,6 +12,7 @@ namespace Weather
             Bootstrapper.Init();
 
             NavigationHelper.Current.SetRootView("MainView", true);
+
 
 
             MainPage = new NavigationPage(new MainView());

@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Weather.Behaviors
 {
+
     public class FlexLayoutBehavior : Behavior<FlexLayout>
     {
         private FlexLayout view;
     }
+
     private void SetState(VisualElement view, string state)
     {
         VisualStateManager.GoToState(view, state);
@@ -56,4 +56,9 @@ namespace Weather.Behaviors
         MainPage_SizeChanged;
         this.view = null;
     }
+
 }
+
+
+
+

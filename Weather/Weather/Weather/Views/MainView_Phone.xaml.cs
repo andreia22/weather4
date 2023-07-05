@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Weather.ViewModels;
+﻿using Weather.ViewModels;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -18,6 +13,7 @@ namespace Weather.Views
             InitializeComponent();
             BindingContext = Resolver.Resolve<MainViewModel>();
         }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
