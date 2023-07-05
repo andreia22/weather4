@@ -1,5 +1,4 @@
-﻿
-using Weather.ViewModels;
+﻿using Weather.ViewModels;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

@@ -4,17 +4,17 @@ using Weather.ViewModels;
 using Weather.Views;
 using Xamarin.Forms;
 
+
 namespace Weather
 {
     public class Bootstrapper
     { 
      public static void Init()
     {
-        var navigation = new FormsNavigationHelper();
+        var navigation = new FormsNavigationHelper(Application.Current);
         if (Device.Idiom == TargetIdiom.Phone)
         {
-            navigation.RegisterView("MainView",
-            typeof(MainView_Phone));
+            navigation.RegisterView("MainView", typeof(MainView_Phone));
         }
         else
         {

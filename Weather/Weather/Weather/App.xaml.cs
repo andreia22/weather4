@@ -9,6 +9,7 @@ namespace Weather
         public App()
         {
             InitializeComponent();
+
             Bootstrapper.Init();
 
             NavigationHelper.Current.SetRootView("MainView", true);

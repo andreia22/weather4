@@ -12,6 +12,7 @@
             <ContentPage.ToolbarItems>
                 <ToolbarItem Icon="refresh.png" Text="Refresh" Command="{Binding Refresh}" />
             </ContentPage.ToolbarItems>
+            
             <Grid>
                 <Image Aspect="AspectFill">
                     <Image.Source>
@@ -21,7 +22,9 @@
                              CachingEnabled="true" CacheValidity="1" />
                     </Image.Source>
                 </Image>
-                <Grid>
+            </Grid>
+            
+            <Grid>
                     <ScrollView BackgroundColor="Transparent">
                     <FlexLayout BindableLayout.ItemsSource="{Binding Items}"Wrap="Wrap" 
                                 JustifyContent="Start" AlignItems="Start">
@@ -89,11 +92,16 @@
                         </BindableLayout.ItemTemplate>
                     </FlexLayout>
                 </ScrollView>
-                <Frame IsVisible="{Binding IsRefreshing}" BackgroundColor="#99FFFFFF" WidthRequest="100" HeightRequest="100"
-                                                  VerticalOptions="Center"
-                                                  HorizontalOptions="Center">
+                        
+                        
+                <Frame IsVisible="{Binding IsRefreshing}" BackgroundColor="#99FFFFFF" 
+                                                          WidthRequest="100" HeightRequest="100"
+                                                          VerticalOptions="Center"
+                                                          HorizontalOptions="Center">
                     <ActivityIndicator Color="Black" IsRunning="True" />
                 </Frame>
+                        
+                        
             </Grid>
         </StackLayout>
     </ContentPage.Content>

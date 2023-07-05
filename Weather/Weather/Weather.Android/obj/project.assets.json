@@ -18,47 +18,6 @@
           }
         }
       },
-      "Caliburn.Micro/4.0.212": {
-        "type": "package",
-        "dependencies": {
-          "Caliburn.Micro.Core": "4.0.212"
-        },
-        "frameworkAssemblies": [
-          "Java.Interop"
-        ],
-        "compile": {
-          "lib/monoandroid80/Caliburn.Micro.Platform.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/monoandroid80/Caliburn.Micro.Platform.dll": {
-            "related": ".Core.pdb;.Core.xml;.pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/monoandroid80/Caliburn.Micro.Platform.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/monoandroid80/Caliburn.Micro.Platform.dll": {
-            "related": ".Core.pdb;.Core.xml;.pdb;.xml"
-          }
-        }
-      },
-      "Caliburn.Micro.Core/4.0.212": {
-        "type": "package",
-        "dependencies": {
-          "System.Runtime.Serialization.Primitives": "4.3.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Caliburn.Micro.Core.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Caliburn.Micro.Core.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
@@ -94,15 +53,6 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
-      "System.Runtime.Serialization.Primitives/4.3.0": {
-        "type": "package",
-        "compile": {
-          "ref/MonoAndroid10/_._": {}
-        },
-        "runtime": {
-          "lib/MonoAndroid10/_._": {}
-        }
-      },
       "TinyNavigationHelper.Abstraction/1.4.7": {
         "type": "package",
         "compile": {
@@ -110,6 +60,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/TinyNavigationHelper.Abstraction.dll": {}
+        }
+      },
+      "TinyNavigationHelper.Forms/1.4.7": {
+        "type": "package",
+        "dependencies": {
+          "TinyNavigationHelper.Abstraction": "1.4.7",
+          "xamarin.forms": "4.6.0.800"
+        },
+        "compile": {
+          "lib/netstandard2.0/TinyNavigationHelper.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/TinyNavigationHelper.Forms.dll": {}
         }
       },
       "Xamarin.AndroidX.Activity/1.2.4.1": {
@@ -1882,9 +1845,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Autofac": "7.0.1",
-          "Caliburn.Micro": "4.0.212",
           "Newtonsoft.Json": "13.0.3",
-          "TinyNavigationHelper.Abstraction": "1.4.7",
+          "TinyNavigationHelper.Forms": "1.4.7",
           "Xamarin.Essentials": "1.7.7",
           "Xamarin.Forms": "5.0.0.2578"
         },
@@ -1917,75 +1879,6 @@
         "lib/netstandard2.0/Autofac.xml",
         "lib/netstandard2.1/Autofac.dll",
         "lib/netstandard2.1/Autofac.xml"
-      ]
-    },
-    "Caliburn.Micro/4.0.212": {
-      "sha512": "cES6hx45uriyhSiyXo4usjrYmGnFpPosuVnq9X5N/MeyuZZLBB1S429cNL7c1xc2eunMsqCQPJDFjD2NDm7G6A==",
-      "type": "package",
-      "path": "caliburn.micro/4.0.212",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "caliburn.micro.4.0.212.nupkg.sha512",
-        "caliburn.micro.nuspec",
-        "lib/monoandroid80/Caliburn.Micro.Platform.Core.dll",
-        "lib/monoandroid80/Caliburn.Micro.Platform.Core.pdb",
-        "lib/monoandroid80/Caliburn.Micro.Platform.Core.xml",
-        "lib/monoandroid80/Caliburn.Micro.Platform.dll",
-        "lib/monoandroid80/Caliburn.Micro.Platform.pdb",
-        "lib/monoandroid80/Caliburn.Micro.Platform.xml",
-        "lib/net462/Caliburn.Micro.Platform.Core.dll",
-        "lib/net462/Caliburn.Micro.Platform.Core.pdb",
-        "lib/net462/Caliburn.Micro.Platform.Core.xml",
-        "lib/net462/Caliburn.Micro.Platform.dll",
-        "lib/net462/Caliburn.Micro.Platform.pdb",
-        "lib/net462/Caliburn.Micro.Platform.xml",
-        "lib/net5.0-windows7.0/Caliburn.Micro.Platform.Core.dll",
-        "lib/net5.0-windows7.0/Caliburn.Micro.Platform.Core.pdb",
-        "lib/net5.0-windows7.0/Caliburn.Micro.Platform.Core.xml",
-        "lib/net5.0-windows7.0/Caliburn.Micro.Platform.dll",
-        "lib/net5.0-windows7.0/Caliburn.Micro.Platform.pdb",
-        "lib/net5.0-windows7.0/Caliburn.Micro.Platform.xml",
-        "lib/net6.0-windows7.0/Caliburn.Micro.Platform.Core.dll",
-        "lib/net6.0-windows7.0/Caliburn.Micro.Platform.Core.pdb",
-        "lib/net6.0-windows7.0/Caliburn.Micro.Platform.Core.xml",
-        "lib/net6.0-windows7.0/Caliburn.Micro.Platform.dll",
-        "lib/net6.0-windows7.0/Caliburn.Micro.Platform.pdb",
-        "lib/net6.0-windows7.0/Caliburn.Micro.Platform.xml",
-        "lib/netcoreapp3.1/Caliburn.Micro.Platform.Core.dll",
-        "lib/netcoreapp3.1/Caliburn.Micro.Platform.Core.pdb",
-        "lib/netcoreapp3.1/Caliburn.Micro.Platform.Core.xml",
-        "lib/netcoreapp3.1/Caliburn.Micro.Platform.dll",
-        "lib/netcoreapp3.1/Caliburn.Micro.Platform.pdb",
-        "lib/netcoreapp3.1/Caliburn.Micro.Platform.xml",
-        "lib/uap10.0.16299/Caliburn.Micro.Platform/Properties/Caliburn.Micro.Platform.rd.xml",
-        "lib/uap10.0.18362/Caliburn.Micro.Platform.Core.dll",
-        "lib/uap10.0.18362/Caliburn.Micro.Platform.Core.pdb",
-        "lib/uap10.0.18362/Caliburn.Micro.Platform.Core.xml",
-        "lib/uap10.0.18362/Caliburn.Micro.Platform.dll",
-        "lib/uap10.0.18362/Caliburn.Micro.Platform.pdb",
-        "lib/uap10.0.18362/Caliburn.Micro.Platform.pri",
-        "lib/uap10.0.18362/Caliburn.Micro.Platform.xml",
-        "lib/xamarinios10/Caliburn.Micro.Platform.Core.dll",
-        "lib/xamarinios10/Caliburn.Micro.Platform.Core.pdb",
-        "lib/xamarinios10/Caliburn.Micro.Platform.Core.xml",
-        "lib/xamarinios10/Caliburn.Micro.Platform.dll",
-        "lib/xamarinios10/Caliburn.Micro.Platform.pdb",
-        "lib/xamarinios10/Caliburn.Micro.Platform.xml"
-      ]
-    },
-    "Caliburn.Micro.Core/4.0.212": {
-      "sha512": "A/17oTTu/oYFSrahT9S6BxDnel/AIhOMSqEOG6MsG/MfchwuOrf144+2IIttu0k2UuSPFjIDKlPoSL5DTniwiw==",
-      "type": "package",
-      "path": "caliburn.micro.core/4.0.212",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "caliburn.micro.core.4.0.212.nupkg.sha512",
-        "caliburn.micro.core.nuspec",
-        "lib/netstandard2.0/Caliburn.Micro.Core.dll",
-        "lib/netstandard2.0/Caliburn.Micro.Core.pdb",
-        "lib/netstandard2.0/Caliburn.Micro.Core.xml"
       ]
     },
     "Newtonsoft.Json/13.0.3": {
@@ -2091,79 +1984,6 @@
         "version.txt"
       ]
     },
-    "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
-      "type": "package",
-      "path": "system.runtime.serialization.primitives/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/net46/System.Runtime.Serialization.Primitives.dll",
-        "lib/netcore50/System.Runtime.Serialization.Primitives.dll",
-        "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
-        "lib/win8/_._",
-        "lib/wp80/_._",
-        "lib/wpa81/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/net46/System.Runtime.Serialization.Primitives.dll",
-        "ref/netcore50/System.Runtime.Serialization.Primitives.dll",
-        "ref/netcore50/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/de/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/es/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/fr/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/it/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/ja/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/ko/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/ru/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/zh-hans/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/zh-hant/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/System.Runtime.Serialization.Primitives.dll",
-        "ref/netstandard1.0/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/de/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/es/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/fr/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/it/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/ja/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/ko/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/ru/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/zh-hans/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/zh-hant/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/System.Runtime.Serialization.Primitives.dll",
-        "ref/netstandard1.3/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/de/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/es/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/fr/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/it/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/ja/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/ko/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/ru/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/zh-hans/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/zh-hant/System.Runtime.Serialization.Primitives.xml",
-        "ref/portable-net45+win8+wp8+wpa81/_._",
-        "ref/win8/_._",
-        "ref/wp80/_._",
-        "ref/wpa81/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll",
-        "system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
-        "system.runtime.serialization.primitives.nuspec"
-      ]
-    },
     "TinyNavigationHelper.Abstraction/1.4.7": {
       "sha512": "d9cGovylQxnt6xVJ85cQMAEymnGJerDJimRbG/grxcU+fy1h2+2+Od/mKxWmmGXxE4EYjkyvw2KgH2Pgrc7/gw==",
       "type": "package",
@@ -2174,6 +1994,18 @@
         "lib/netstandard2.0/TinyNavigationHelper.Abstraction.dll",
         "tinynavigationhelper.abstraction.1.4.7.nupkg.sha512",
         "tinynavigationhelper.abstraction.nuspec"
+      ]
+    },
+    "TinyNavigationHelper.Forms/1.4.7": {
+      "sha512": "E+uy83saLOUhS8tY3gMjt1JQUkHX1Jzd8rTT5K+0NLbucuRK8l/3OHbBt0/ASjgLdGWvDGitNihu7XMtBQXfjg==",
+      "type": "package",
+      "path": "tinynavigationhelper.forms/1.4.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/TinyNavigationHelper.Forms.dll",
+        "tinynavigationhelper.forms.1.4.7.nupkg.sha512",
+        "tinynavigationhelper.forms.nuspec"
       ]
     },
     "Xamarin.AndroidX.Activity/1.2.4.1": {

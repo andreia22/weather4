@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Text;
 using System.Threading.Tasks;
 using Weather.Models;
-using Xamarin.Forms.Shapes;
-using Xamarin.Forms;
 using Newtonsoft.Json;
 using System.Net.Http;
 
@@ -30,6 +26,7 @@ namespace Weather.Services
             var data = JsonConvert.DeserializeObject<WeatherData>(result);
             var forecast = new Forecast()
             {
+
                 City = data.city.name,
                 Items = data.list.Select(x => new ForecastItem()
                 {
