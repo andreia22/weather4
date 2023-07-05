@@ -13,6 +13,7 @@ namespace Weather
 
      public static void Init()
     {
+
         var navigation = new FormsNavigationHelper();
         if (Device.Idiom == TargetIdiom.Phone)
         {
