@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Weather.Models
 {
-    internal class WeatherData
+    public class WeatherData
     {
         // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
         public class City

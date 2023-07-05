@@ -9,6 +9,8 @@ namespace Weather
         public App()
         {
             InitializeComponent();
+            Bootstrapper.Init();
+            MainPage = new NavigationPage(new MainView());
 
             MainPage = new MainPage();
         }
