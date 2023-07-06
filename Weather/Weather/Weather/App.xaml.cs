@@ -13,11 +13,11 @@ namespace Weather
 
             Bootstrapper.Init();
 
-            NavigationHelper.Current.SetRootView("MainView", true);
+            //NavigationHelper.Current.SetRootView("MainView", true);
 
             MainPage = new NavigationPage(new MainView());
 
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
         }
 
         protected override void OnStart()
