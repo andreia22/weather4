@@ -23,7 +23,7 @@ namespace Weather.Behaviors
             }
         }
 
-        private void UpdateState()
+       /* private void UpdateState()
         {
             MainThread.BeginInvokeOnMainThread(() =>
             {
@@ -36,7 +36,31 @@ namespace Weather.Behaviors
                 SetState(view, "Portrait");
             });
         }
-
+       */
+        private void UpdateState()
+        {
+            try
+            {
+                MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    var page = Application.Current.MainPage;
+                    if (page.Width > page.Height)
+                    {
+                        SetState(view, "Landscape");
+                        return;
+                    }
+                    SetState(view, "Portrait");
+                });
+            }
+            catch (Exception ex)
+            {
+                DisplayErrorMessage("Ocorreu um erro ao atualizar o estado: " + ex.Message);
+            }
+        }
+        private void DisplayErrorMessage(string message)
+        {
+             Application.Current.MainPage.DisplayAlert("Erro", message, "OK");
+        }
         protected override void OnAttachedTo(FlexLayout view)
         {
             this.view = view;
