@@ -16,7 +16,7 @@ androidsdkpath=c:\program files (x86)\android\android-sdk\
 androidndkpath=
 javasdkpath=c:\program files\microsoft\jdk-11.0.16.101-hotspot\
 androidsequencepointsmode=none
-xamarinandroidversion=13.2.0-6
+xamarinandroidversion=13.2.0-0
 monosymbolarchive=false
 androiduselatestplatformsdk=false
 targetframeworkversion=v13.0
@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638241661397985009
+_nugetassetstimestamp=638241813809435982
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=d:\documentos\repositorio\weather\weather\weather.android\weather.android.csproj
+projectfullpath=c:\users\389487\source\repos\weather4\weather\weather\weather.android\weather.android.csproj

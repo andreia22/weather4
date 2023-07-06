@@ -8,25 +8,22 @@ using Xamarin.Forms;
 namespace Weather
 {
     public class Bootstrapper
-    { 
-     public static void Init()
     {
-        var navigation = new FormsNavigationHelper(Application.Current);
-        if (Device.Idiom == TargetIdiom.Phone)
+        public static void Init()
         {
-            navigation.RegisterView("MainView", typeof(MainView_Phone));
-        }
-        else
-        {
-            navigation.RegisterView("MainView", typeof(MainView));
-        }
+            var containerBuilder = new ContainerBuilder();
 
-        var containerBuilder = new ContainerBuilder();
-        containerBuilder.RegisterType<OpenWeatherMapWeatherService>().As<IWeatherService>();
-        containerBuilder.RegisterType<MainViewModel>();
+            containerBuilder.RegisterType
 
-        var container = containerBuilder.Build();
-        Resolver.Initialize(container);
+            <OpenWeatherMapWeatherService>().As <IWeatherService>();
+
+            containerBuilder.RegisterType<MainViewModel>();
+
+            var container = containerBuilder.Build();
+
+            Resolver.Initialize(container);
         }
     }
 }
+
+

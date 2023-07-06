@@ -9,8 +9,7 @@ namespace Weather.Views
     public partial class MainView_Phone : ContentPage
     {
         public MainView_Phone()
-        {
-            InitializeComponent();
+        {            
             BindingContext = Resolver.Resolve<MainViewModel>();
         }
 

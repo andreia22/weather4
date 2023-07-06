@@ -4,7 +4,7 @@
              x:Class="Weather.Views.MainView_Phone"
              Title="{Binding City}">
 
-    <RefreshView Command="{Binding Refresh}" IsRefreshing="{Binding IsRefreshing}>
+    
     <CollectionView ItemsSource="{Binding Days}" IsGrouped="True" BackgroundColor="Transparent">
         <CollectionView.GroupHeaderTemplate>
             <DataTemplate>
@@ -16,7 +16,7 @@
             </DataTemplate>
         </CollectionView.GroupHeaderTemplate>
         </CollectionView>
-    </RefreshView>
+    
 
     <CollectionView.ItemTemplate>
         <DataTemplate>
@@ -42,19 +42,22 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <CollectionView ItemsSource="{Binding Days}" IsGrouped="True"
-                            BackgroundColor="Transparent">
+            <RefreshView Command="{Binding Refresh}" IsRefreshing="{Binding IsRefreshing}>
+                <CollectionView ItemsSource="{Binding Days}" IsGrouped="True"
+                                BackgroundColor="Transparent">
                 <CollectionView.GroupHeaderTemplate>
                     <DataTemplate>
                         <ContentView Padding="15,5"
-                                     BackgroundColor="#9F5010">
+                                         BackgroundColor="#9F5010">
                             <Label FontAttributes="Bold" TextColor="White"
-                                   Text="{Binding DateAsString}"
-                                   VerticalOptions="Center"/>
+                                       Text="{Binding DateAsString}"
+                                       VerticalOptions="Center"/>
                         </ContentView>
+
                     </DataTemplate>
                 </CollectionView.GroupHeaderTemplate>
-            </CollectionView>
+                </CollectionView>
+            </RefreshView>
 
         </StackLayout>
     </ContentPage.Content>

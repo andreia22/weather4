@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\repositorio\\Weather\\Weather\\Weather\\Weather.csproj": {}
+    "C:\\Users\\389487\\Source\\Repos\\weather4\\Weather\\Weather\\Weather\\Weather.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\repositorio\\Weather\\Weather\\Weather\\Weather.csproj": {
+    "C:\\Users\\389487\\Source\\Repos\\weather4\\Weather\\Weather\\Weather\\Weather.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\repositorio\\Weather\\Weather\\Weather\\Weather.csproj",
+        "projectUniqueName": "C:\\Users\\389487\\Source\\Repos\\weather4\\Weather\\Weather\\Weather\\Weather.csproj",
         "projectName": "Weather",
-        "projectPath": "D:\\Documentos\\repositorio\\Weather\\Weather\\Weather\\Weather.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\repositorio\\Weather\\Weather\\Weather\\obj\\",
+        "projectPath": "C:\\Users\\389487\\Source\\Repos\\weather4\\Weather\\Weather\\Weather\\Weather.csproj",
+        "packagesPath": "C:\\Users\\389487\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\389487\\Source\\Repos\\weather4\\Weather\\Weather\\Weather\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\389487\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[7.0.1, )"
             },
+            "Caliburn.Micro": {
+              "target": "Package",
+              "version": "[4.0.212, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -59,7 +63,7 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
-            "TinyNavigationHelper.Forms": {
+            "TinyNavigationHelper.Abstraction": {
               "target": "Package",
               "version": "[1.4.7, )"
             },
@@ -83,7 +87,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

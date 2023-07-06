@@ -1,4 +1,5 @@
-﻿using Weather.Views;
+﻿using TinyNavigationHelper.Abstraction;
+using Weather.Views;
 using Xamarin.Forms;
 
 
@@ -13,8 +14,6 @@ namespace Weather
             Bootstrapper.Init();
 
             NavigationHelper.Current.SetRootView("MainView", true);
-
-
 
             MainPage = new NavigationPage(new MainView());
 

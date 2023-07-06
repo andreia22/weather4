@@ -4,6 +4,10 @@ using System.Threading.Tasks;
 using Weather.Models;
 using Newtonsoft.Json;
 using System.Net.Http;
+using System.Linq;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using Xamarin.Essentials;
 
 namespace Weather.Services
 {
@@ -11,8 +15,7 @@ namespace Weather.Services
     public class OpenWeatherMapWeatherService : IWeatherService
 
     {
-        public async Task<Forecast> GetForecast(double latitude, double
-        longitude)
+        public async Task<Forecast> GetForecast(double latitude, double longitude)
         {
             var language = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
             var apiKey = "{dd24784b34b05821e296aa47ce47e318}";
@@ -23,7 +26,7 @@ namespace Weather.Services
 
             var httpClient = new HttpClient();
             var result = await httpClient.GetStringAsync(uri);
-            var data = JsonConvert.DeserializeObject<WeatherData>(result);
+            var data = JsonConvert.DeserializeObject<WeatherData.Root>(result);
             var forecast = new Forecast()
             {
 
@@ -34,13 +37,13 @@ namespace Weather.Services
                     Temperature = x.main.temp,
                     WindSpeed = x.wind.speed,
                     Description = x.weather.First().description,
-                    Icon =
-            $"http://openweathermap.org/img/w/{x.weather.First().icon}.png"
+                    Icon = $"http://openweathermap.org/img/w/{x.weather.First().icon}.png" 
                 }).ToList()
             };
             return forecast;
 
         }
+        
         private DateTime ToDateTime(double unixTimeStamp)
         {
             DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0,

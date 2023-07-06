@@ -13,7 +13,8 @@ namespace Weather.Views
             InitializeComponent();
             BindingContext = Resolver.Resolve<MainViewModel>();
         }
-            protected override void OnAppearing()
+
+        protected override void OnAppearing()
         {
             base.OnAppearing();
             if (BindingContext is MainViewModel viewModel)
@@ -23,7 +24,7 @@ namespace Weather.Views
                     await viewModel.LoadData();
                 });
 
-            }  
+            }
         }
     }
 }

@@ -1,2 +1,4 @@
 D:\Documentos\repositorio\Weather\Weather\Weather\obj\Debug\netstandard2.0\Weather.csproj.AssemblyReference.cache
 D:\Documentos\repositorio\Weather\Weather\Weather\obj\Debug\netstandard2.0\Weather.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\389487\Source\Repos\weather4\Weather\Weather\Weather\obj\Debug\netstandard2.0\Weather.csproj.AssemblyReference.cache
+C:\Users\389487\Source\Repos\weather4\Weather\Weather\Weather\obj\Debug\netstandard2.0\Weather.GeneratedMSBuildEditorConfig.editorconfig
