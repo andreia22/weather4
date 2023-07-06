@@ -53,7 +53,28 @@
                                     </VisualStateManager.VisualStateGroups>
                                     <Label FontSize="16" FontAttributes="Bold" Text="{Binding TimeAsString}" HorizontalOptions="Center" />
                                     <Image WidthRequest="100" HeightRequest="100"
-                                            Aspect="AspectFit" HorizontalOptions="Center" Source="{Binding Icon}" />
+                                            Aspect="AspectFit" HorizontalOptions="Center" Source="{Binding Icon}">
+
+                                        <VisualStateManager.VisualStateGroups>
+                                            <VisualStateGroup>
+                                                <VisualState Name="Portrait">
+                                                    <VisualState.Setters>
+                                                        <Setter Property="WidthRequest" Value="100" />
+                                                        <Setter Property="HeightRequest" Value="100" />
+                                                    </VisualState.Setters>
+                                                </VisualState>
+                                                <VisualState Name="Landscape">
+                                                    <VisualState.Setters>
+                                                        <Setter Property="WidthRequest" Value="150" />
+                                                        <Setter Property="HeightRequest" Value="150" />
+                                                    </VisualState.Setters>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateManager.VisualStateGroups>
+
+                                    </Image>
+
+
                                     <Label FontSize="14" FontAttributes="Bold"
                                            Text="{Binding Temperature, StringFormat='{0}° C'}"
                                            HorizontalOptions="Center" />
